@@ -92,8 +92,6 @@ function draw(){
     
     if (fruitGroup.isTouching(sword))
     {
-      
-      
       swordSound.play();
       fruitGroup.destroyEach();
       score=score+1;
@@ -107,7 +105,6 @@ function draw(){
     
     fruitGroup.destroyEach();
     enemyGroup.destroyEach();
-  
   }
   
   }
@@ -135,36 +132,12 @@ function draw(){
   {
       reset();
   }
-  
-  
-  
-  
-  
-  
+ 
   
   // displays all the sprites 
    drawSprites();
-
-
-
-
-
 }
   
-  
-   
-  
-  
-  
-  
-  
-  
-   
-  
- 
- 
-  
- 
 
 
 // function to create the fruits and make them move across the canvas
