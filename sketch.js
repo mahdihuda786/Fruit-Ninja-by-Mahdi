@@ -216,4 +216,8 @@ function enemy()
 function reset()
 {
     gameState = PLAY;
+    sword = createSprite(300,300,10,10);
+    sword.addImage(swordImage);
+    sword.x = mouseX;
+    sword.y = mouseY;
 }
