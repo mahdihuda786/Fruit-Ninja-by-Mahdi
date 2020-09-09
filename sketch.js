@@ -122,7 +122,7 @@ function draw(){
    // displays the score
   fill("black");
   textSize(20);
-  text("score: " + score,width/2,height-700);
+  text("score: " + score,width/2,height-height+20);
 
   if(mousePressedOver(restart) && gameState === END) 
   {
