@@ -39,7 +39,7 @@ function preload(){
   gameOverImage = loadImage("gameover.png");
   
   swordSound = loadSound("Sword Sound Effect.mp3");
-  gameOverSound = loadSound("Game Over - Sound Effect [HD].mp3");
+  gameOverSound = loadSound("Game Over - Sound Effect[HD].mp3");
   
   restartImage = loadImage("Reset-button-green.jpg");
   
