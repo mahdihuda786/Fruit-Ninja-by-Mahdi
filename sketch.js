@@ -122,7 +122,7 @@ function draw(){
    // displays the score
   fill("black");
   textSize(20);
-  text("score: " + score,width/2,height-height+20);
+  text("score: " + score,width/2,height-height+25);
 
   if(mousePressedOver(restart) && gameState === END) 
   {
@@ -133,21 +133,6 @@ function draw(){
    drawSprites();
 }
   
-  
-   
-  
-  
-  
-  
-  
-  
-   
-  
- 
- 
-  
- 
-
 
 // function to create the fruits and make them move across the canvas
 function fruits()
