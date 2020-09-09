@@ -48,21 +48,21 @@ function preload(){
 
 function setup(){
   // creates the canvas
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
 
   // creates the sword 
-  sword = createSprite(300,300,10,10);
+  sword = createSprite(width/2,height/2,10,10);
   
   
   // creates the fruit and enemy groups 
   fruitGroup = createGroup();
   enemyGroup = createGroup();
   
-  gameOver = createSprite(300,300,13,13);
+  gameOver = createSprite(width/2,height/2,13,13);
   gameOver.addImage(gameOverImage);
   gameOver.scale = 2.8;
   
-  restart = createSprite(300,400,13,13);
+  restart = createSprite(width/2,height-200,13,13);
   restart.addImage(restartImage);
   restart.scale = 0.1;
   
@@ -122,7 +122,7 @@ function draw(){
    // displays the score
   fill("black");
   textSize(20);
-  text("score: " + score,370,50);
+  text("score: " + score,width/2,height-700);
 
   if(mousePressedOver(restart) && gameState === END) 
   {
@@ -182,14 +182,14 @@ if (frameCount % 60 === 0)
   
   if(position === 1)
   {
-    fruit.x = 400;
+    fruit.x = width;
     fruit.velocityX=-(7+(score/4));
   }
   else
   {
     if(position===2)
     {
-      fruit.x=0;
+      fruit.x=width-width;
       
       
       fruit.velocityX = (7+(score/4));
@@ -210,7 +210,7 @@ function enemy()
 {
   if (frameCount % 200 === 0)  
   {
-    monster = createSprite(400,200,20,20);
+    monster = createSprite(width,200,20,20);
     monster.addImage(mImage);
     monster.y = Math.round(random(100,300));
     monster.velocityX = -(8+(score/10));
