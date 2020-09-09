@@ -39,7 +39,7 @@ function preload(){
   gameOverImage = loadImage("gameover.png");
   
   swordSound = loadSound("Sword Sound Effect.mp3");
-  gameOverSound = loadSound("Game Over - Sound Effect[HD].mp3");
+  gameOverSound = loadSound("Game Over - Sound Effect [HD].mp3");
   
   restartImage = loadImage("Reset-button-green.jpg");
   
@@ -105,6 +105,7 @@ function draw(){
     
     fruitGroup.destroyEach();
     enemyGroup.destroyEach();
+  
   }
   
   }
@@ -117,27 +118,35 @@ function draw(){
     sword.destroy();
 }   
     
-    
-      
-    
-  
+
    // displays the score
   fill("black");
   textSize(20);
   text("score: " + score,370,50);
-  
-  
-  
+
   if(mousePressedOver(restart) && gameState === END) 
   {
       reset();
   }
- 
-  
+
   // displays all the sprites 
    drawSprites();
 }
   
+  
+   
+  
+  
+  
+  
+  
+  
+   
+  
+ 
+ 
+  
+ 
 
 
 // function to create the fruits and make them move across the canvas
@@ -216,8 +225,10 @@ function enemy()
 function reset()
 {
     gameState = PLAY;
-    sword = createSprite(300,300,10,10);
+    sword = createSprite(300,300,10,100);
     sword.addImage(swordImage);
     sword.x = mouseX;
     sword.y = mouseY;
+    score = 0;
+                  
 }
